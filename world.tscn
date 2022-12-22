@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://snake/snake.tscn" type="PackedScene" id=2]
+[ext_resource path="res://obstacle.tscn" type="PackedScene" id=3]
+
+[node name="World" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 23.0
+margin_top = 19.0
+margin_right = 164.0
+margin_bottom = 44.0
+text = "Click to add new tail"
+
+[node name="Snake" parent="." instance=ExtResource( 2 )]
+position = Vector2( 512, 304 )
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource( 3 )]
+position = Vector2( 221, 197 )
+scale = Vector2( 2, 2 )
+
+[node name="Obstacle2" parent="Obstacles" instance=ExtResource( 3 )]
+position = Vector2( 654, 475 )
+
+[node name="Obstacle3" parent="Obstacles" instance=ExtResource( 3 )]
+position = Vector2( 769, 154 )
+scale = Vector2( 0.5, 0.5 )
